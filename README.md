@@ -28,8 +28,17 @@
     * 변수값 사용하여 명령어 처리 후 다시 마지막 위치로 돌아와 다음 파라미터 처리
   * 예제
     ```
-    
-    
+    while getopts ":abce:f" Option
+    do
+     case $Option in
+      a )
+      b )
+      ...
+      f )
+     esac
+    done
+    shift $((OPTIND - 1))
+    ```
 ---
 * ___sed 명령어___
   * 비대화형 모드의 텍스트 파일 에디터 (줄 단위 편집기)
